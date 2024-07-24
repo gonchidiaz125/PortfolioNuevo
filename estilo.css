@@ -182,7 +182,7 @@ html{
     font-size: 30px;
     margin-bottom: 10px;
 }
-.sobremi button{
+.sobremi a{
     cursor: pointer;
     background-color: transparent;
     border: 2px solid #fff;
@@ -195,7 +195,7 @@ html{
     position: relative;
     z-index: 10;
 }
-.sobremi button .overlay{
+.sobremi a .overlay{
     position: absolute;
     top: 0;
     left: 0;
@@ -205,7 +205,7 @@ html{
     z-index: -1;
     transition: 1s;
 }
-.sobremi button:hover .overlay{
+.sobremi a:hover .overlay{
     width: 100%;
 }
 /* SECCION S K I L L S */
@@ -269,6 +269,33 @@ html{
     font-size: 14px;
 }
 /* Estas clases se agregaran dinamicamente mediante javascript */
+.skills .skill .backendnet{
+    width: 0%;
+    animation: 2s backendnet forwards;
+}
+@keyframes backendnet {
+    0%{width: 0%;}
+    100%{width: 85%;}
+}
+
+.skills .skill .sqlserver{
+    width: 0%;
+    animation: 2s sqlserver forwards;
+}
+@keyframes sqlserver {
+    0%{width: 0%;}
+    100%{width: 75%;}
+}
+
+.skills .skill .react{
+    width: 0%;
+    animation: 2s react forwards;
+}
+@keyframes react {
+    0%{width: 0%;}
+    100%{width: 60%;}
+}
+
 .skills .skill .javascript{
     width: 0%;
     animation: 2s javascript forwards;
@@ -286,32 +313,13 @@ html{
     0%{width: 0%;}
     100%{width: 89%;}
 }
-
-.skills .skill .photoshop{
+.skills .skill .git{
     width: 0%;
-    animation: 2s photoshop forwards;
+    animation: 2s git forwards;
 }
-@keyframes photoshop {
+@keyframes git {
     0%{width: 0%;}
-    100%{width: 95%;}
-}
-
-.skills .skill .wordpress{
-    width: 0%;
-    animation: 2s wordpress forwards;
-}
-@keyframes wordpress {
-    0%{width: 0%;}
-    100%{width: 81%;}
-}
-
-.skills .skill .drupal{
-    width: 0%;
-    animation: 2s drupal forwards;
-}
-@keyframes drupal {
-    0%{width: 0%;}
-    100%{width: 55%;}
+    100%{width: 80%;}
 }
 
 .skills .skill .comunicacion{
@@ -348,15 +356,6 @@ html{
 @keyframes dedicacion {
     0%{width: 0%;}
     100%{width: 65%;}
-}
-
-.skills .skill .proyect{
-    width: 0%;
-    animation: 2s proyect forwards;
-}
-@keyframes proyect {
-    0%{width: 0%;}
-    100%{width: 94%;}
 }
 /* SECCION CURRICULUM */
 .curriculum{
@@ -465,38 +464,39 @@ html{
     bottom: 4px;
 }
 /* SECCION PORTFOLIO */
-.portfolio{
+.proyectos{
     background-color: #252A2E;
     color: #fff;
     padding: 50px 20px;
 }
-.portfolio .contenido-seccion{
+.proyectos .contenido-seccion{
     max-width: 1100px;
     margin: auto;
 }
-.portfolio h2{
+.proyectos h2{
     font-size: 48px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
 }
-.portfolio .galeria{
+.proyectos .galeria{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    
 }
-.portfolio .galeria .proyecto{
+.proyectos .galeria .proyecto{
     position: relative;
-    max-width: 340px;
+    max-width: 300px;
     height: fit-content;
     margin: 10px;
     cursor: pointer;
 }
-.portfolio .galeria .proyecto img{
+.proyectos .galeria .proyecto img{
     width: 100%;
     display: block;
 }
-.portfolio .galeria .proyecto .overlay{
+.proyectos .galeria .proyecto .overlay{
     position: absolute;
     top: 0;
     width: 100%;
@@ -511,14 +511,14 @@ html{
     letter-spacing: 3px;
     opacity: 0;
 }
-.portfolio .galeria .proyecto .overlay h3{
+.proyectos .galeria .proyecto .overlay h3{
     margin-bottom: 20px;
     transition: 1s;
 }
-.portfolio .galeria .proyecto .overlay:hover{
+.proyectos .galeria .proyecto .overlay:hover{
     opacity: 1;
 }
-.portfolio .galeria .proyecto .overlay:hover h3{
+.proyectos .galeria .proyecto .overlay:hover h3{
     margin-bottom: 0px;
 }
 /* SECCION CONTACTO */
@@ -589,7 +589,7 @@ html{
     position: absolute;
     top: 40%;
     background-color: #252A2E;
-    padding: 20px;
+    padding: 10px;
     max-swidth: 350px;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -695,14 +695,14 @@ footer .arriba{
         margin-left: 20px;
     }
 
-    .portfolio .galeria{
+    .proyectos .galeria{
         display: block;
         width: 100%;
     }
-    .portfolio .galeria .proyecto{
+    .proyectos .galeria .proyecto{
         max-width: 100%;
     }
-    .portfolio .galeria .proyecto img{
+    .proyectos .galeria .proyecto img{
         width: 100%;
     }
     .contacto .fila{

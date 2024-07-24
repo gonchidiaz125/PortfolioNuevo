@@ -7,21 +7,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="estilo.css">
+    <script src="script.js" defer></script>
+    <script type="text/javascript"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
 </head>
 <body>
     <!-- MENU ENCABEZADO -->
     <div class="contenedor-header">
         <header>
             <div class="logo">
-                <a href="#">Nick</a>
+                <a href="#">Gon</a>
             </div>
             <nav id="nav">
                 <ul>
                     <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
                     <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
                     <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
-                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
-                    <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">RUTA DE VIDA</a></li>
+                    <li><a href="#proyectos" onclick="seleccionar()">PROYECTOS</a></li>
                     <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
                 </ul>
             </nav>
@@ -35,17 +40,16 @@
     <section id="inicio" class="inicio">
         <div class="contenido-banner">
             <div class="contenedor-img">
-                <img src="img/hero.png" alt="">
+                <img src="img/gon.jpeg" alt="">
             </div>
-            <h1>NICK PEREZ</h1>
-            <h2>Ingeniero de Software - Experto UI/UX</h2>
+            <h1>Gonzalo A. Diaz</h1>
+            <h3>Desarrollador FullStack .NET</h3>
+            <div id="email">gonchi.diaz125@gmail.com</div>
             <div class="redes">
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-skype"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#"><i class="fa-solid fa-rss"></i></a>
+                <a href="https://github.com/gonchidiaz125" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/gonzalo-andres-diaz/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
+            
         </div>
     </section>
 
@@ -53,7 +57,8 @@
     <section id="sobremi" class="sobremi">
         <div class="contenido-seccion">
             <h2>Sobre Mí</h2>
-            <p><span>Hola, soy Nick Perez.</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam unde soluta minima necessitatibus, voluptas consectetur vero officiis quas, explicabo deleniti repellendus aliquid debitis maiores numquam voluptate reprehenderit in delectus dolores.</p>
+            <p><span>Hola, Soy Gonzalo Diaz.</span> Hace un tiempo decidí explorar el mundo de la tecnología, mi idea era aprender algo nuevo, fue así como empecé a estudiar programación. Hoy ya egresado como Técnico Superior en Programación, estoy buscando mi próxima experiencia laboral en la industria IT.
+                Me defino como una persona honesta, responsable, empática, proactiva, con muchas ganas de aprender cosas nuevas, mejorar día a día y receptivo a sugerencias.</p>
 
             <div class="fila">
                 <!-- datos personales -->
@@ -61,28 +66,16 @@
                     <h3>Datos Personales</h3>
                     <ul>
                         <li>
-                            <strong>Cumpleaños</strong>
-                            15-01-1980
-                        </li>
-                        <li>
-                            <strong>Teléfono</strong>
-                            2555 5454545
-                        </li>
+                            <strong>Edad</strong>
+                            29 Años
+                        </li> 
                         <li>
                             <strong>Email</strong>
-                            cw@example.com
-                        </li>
-                        <li>
-                            <strong>Website</strong>
-                            www.example.com
+                            gonchi.diaz125@gmail.com
                         </li>
                         <li>
                             <strong>Dirección</strong>
-                            123 San Luis, Argentina
-                        </li>
-                        <li>
-                            <strong>Cargo</strong>
-                            <span>FREELANCE</span>
+                            Córdoba, Capital, Argentina
                         </li>
                     </ul>
                 </div>
@@ -92,10 +85,6 @@
                     <h3>Intereses</h3>
                     <div class="contenedor-intereses">
                         <div class="interes">
-                            <i class="fa-solid fa-gamepad"></i>
-                            <span>JUEGOS</span>
-                        </div>
-                        <div class="interes">
                             <i class="fa-solid fa-headphones"></i>
                             <span>MUSICA</span>
                         </div>
@@ -104,16 +93,12 @@
                             <span>VIAJAR</span>
                         </div>
                         <div class="interes">
-                            <i class="fa-brands fa-apple"></i>
-                            <span>MAC OS</span>
-                        </div>
-                        <div class="interes">
                             <i class="fa-solid fa-person-hiking"></i>
                             <span>DEPORTE</span>
                         </div>
                         <div class="interes">
-                            <i class="fa-solid fa-book"></i>
-                            <span>LIBROS</span>
+                            <i class="fa-solid fa-motorcycle"></i>
+                            <span>MOTOS</span>
                         </div>
                         <div class="interes">
                             <i class="fa-solid fa-car"></i>
@@ -127,11 +112,11 @@
                     </div>
                 </div>
             </div>
-            <button>
+            <a class="download-button" href="/CVGonzaloADiaz.pdf" download="CVGonzaloADiaz.pdf">
                 Descargar CV <i class="fa-solid fa-download"></i>
                 <span class="overlay"></span>
-            </button>
-        </div>
+            </a>
+        </div>    
     </section>
 
     <!-- SECCION SKILLS -->
@@ -141,7 +126,31 @@
             <div class="fila">
                 <!-- Technical Skill -->
                 <div class="col">
-                    <h3>Technical Skills</h3>
+                    <h3>Tecnologias</h3>
+                    <div class="skill">
+                        <span>.NET</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>SQL Server</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>75%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>React</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>60%</span>
+                            </div>
+                        </div>
+                    </div>
                     <div class="skill">
                         <span>Javascript</span>
                         <div class="barra-skill">
@@ -159,33 +168,19 @@
                         </div>
                     </div>
                     <div class="skill">
-                        <span>Photoshop</span>
+                        <span>GIT</span>
                         <div class="barra-skill">
                             <div class="progreso">
-                                <span>95%</span>
+                                <span>80%</span>
                             </div>
                         </div>
                     </div>
-                    <div class="skill">
-                        <span>Wordpress</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>81%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Drupa</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>55%</span>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
+                
                 <!-- Professional Skills -->
                 <div class="col">
-                    <h3>Professional Skills</h3>
+                    <h3>Soft skills</h3>
                     <div class="skill">
                         <span>Comunicación</span>
                         <div class="barra-skill">
@@ -218,49 +213,23 @@
                             </div>
                         </div>
                     </div>
-                    <div class="skill">
-                        <span>Proyect Management</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>94%</span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECCION CURRICULUM -->
+    <!-- SECCION RUTA DE VIDA -->
     <section id="curriculum" class="curriculum">
         <div class="contenido-seccion">
-            <h2>Curriculum</h2>
+            <h2>Ruta de vida</h2>
             <div class="fila">
                 <div class="col izquierda">
                     <h3>Educación</h3>
                     <div class="item izq">
-                        <h4>Arte y Multimedia</h4>
-                        <span class="casa">Universidad de Oxford</span>
-                        <span class="fecha">2005 - 2008</span>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
-                        <div class="conectori">
-                            <div class="circuloi"></div>
-                        </div>
-                    </div>
-                    <div class="item izq">
-                        <h4>Arte y Multimedia</h4>
-                        <span class="casa">Universidad de Oxford</span>
-                        <span class="fecha">2005 - 2008</span>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
-                        <div class="conectori">
-                            <div class="circuloi"></div>
-                        </div>
-                    </div>
-                    <div class="item izq">
-                        <h4>Arte y Multimedia</h4>
-                        <span class="casa">Universidad de Oxford</span>
-                        <span class="fecha">2005 - 2008</span>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
+                        <h4>Técnico Superior en Programación</h4>
+                        <span class="casa">Teclab Instituto Técnico Superior</span>
+                        <span class="fecha">2022 - 2024</span>
+                        <p></p>
                         <div class="conectori">
                             <div class="circuloi"></div>
                         </div>
@@ -268,30 +237,35 @@
                 </div>
 
                 <div class="col derecha">
-                    <h3>Experiencia de trabajo</h3>
+                    <h3>Experiencia laboral</h3>
                     <div class="item der">
-                        <h4>Front Developer</h4>
-                        <span class="casa">Nombre de Compañía</span>
-                        <span class="fecha">2005 - 2008</span>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
+                        <h4>Desarrollador Junior</h4>
+                        <span class="casa">Micam</span>
+                        <span class="fecha">2023 - abril 2024</span>
                         <div class="conectord">
                             <div class="circulod"></div>
                         </div>
                     </div>
                     <div class="item der">
-                        <h4>Front Developer</h4>
-                        <span class="casa">Nombre de Compañía</span>
-                        <span class="fecha">2005 - 2008</span>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
+                        <h4>Técnico mecánico New Holland</h4>
+                        <span class="casa">GRIFFA S.A.</span>
+                        <span class="fecha">2021 - 2023</span>
                         <div class="conectord">
                             <div class="circulod"></div>
                         </div>
                     </div>
                     <div class="item der">
-                        <h4>Front Developer</h4>
-                        <span class="casa">Nombre de Compañía</span>
-                        <span class="fecha">2005 - 2008</span>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, cumque repellat, tempora recusandae aliquam nemo esse natus impedit, nostrum temporibus veritatis eaque soluta aperiam id repudiandae fugiat deserunt! Explicabo, veritatis?</p>
+                        <h4>Vendedor</h4>
+                        <span class="casa">Caroya SA</span>
+                        <span class="fecha">2019 - 2021</span>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Chofer</h4>
+                        <span class="casa">Jesús María Carnes SRL</span>
+                        <span class="fecha">2015 - 2018</span>
                         <div class="conectord">
                             <div class="circulod"></div>
                         </div>
@@ -301,51 +275,66 @@
         </div>
     </section>
 
-    <!-- SECCION PORTFOLIO -->
-    <section id="portfolio" class="portfolio">
+    <section id="proyectos" class="proyectos">
         <div class="contenido-seccion">
-            <h2>PORTFOLIO</h2>
+            <h2>PROYECTOS</h2>
             <div class="galeria">
                 <div class="proyecto">
-                    <img src="img/p1.jpg" alt="">
+                    <img src="img/sqlSERVER.png" alt="">
                     <div class="overlay">
-                        <h3>Diseño Creativo</h3>
-                        <p>Fotografía</p>
+                        <h3>Ejemplo SQL Server</h3>
+                        <p>Base de datos</p>
+                        <a href="https://gonzalodiaz-sqlserver.netlify.app/index.html" target="_blank" class="btn btn-primary" >Ir a ejemplo</a>
+                        <a href="https://github.com/gonchidiaz125/SqlServerEjemplos" target="_blank" class="btn btn-primary">
+                            Código
+                            <i class="fab fa-github"></i>                            
+                        </a>
                     </div>
                 </div>
                 <div class="proyecto">
-                    <img src="img/p2.jpg" alt="">
+                    <img src="img/imagenValPassword.png" alt="">
                     <div class="overlay">
-                        <h3>Diseño Creativo</h3>
-                        <p>Fotografía</p>
+                        <h3>Validación de Password</h3>
+                        <p>Front-End</p>
+                        <a href="https://gonzalodiaz-validadordepassword.netlify.app/" target="_blank" class="btn btn-primary">Ir a ejemplo</a>
+                        <a href="https://github.com/gonchidiaz125/ValidadorPassword" target="_blank" class="btn btn-primary">
+                            Código
+                            <i class="fab fa-github"></i>                            
+                          </a>
                     </div>
                 </div>
                 <div class="proyecto">
-                    <img src="img/p3.jpg" alt="">
+                    <img src="img/visual.jpg" alt="">
                     <div class="overlay">
-                        <h3>Diseño Creativo</h3>
-                        <p>Fotografía</p>
+                        <h3>Validación de Password</h3>
+                        <p>Backend .Net</p>
+                        <a href="https://github.com/gonchidiaz125/ValidadorDePasswordNet" target="_blank" class="btn btn-primary">
+                            <p>Código</p>
+                            <i class="fab fa-github"></i>
+                          </a>
                     </div>
                 </div>
                 <div class="proyecto">
-                    <img src="img/p4.jpg" alt="">
+                    <img src="img/mistareas.png" alt="">
                     <div class="overlay">
-                        <h3>Diseño Creativo</h3>
-                        <p>Fotografía</p>
+                        <h3>App lista de tareas diarias con Vue.js 3</h3>
+                        <p>Front-End</p>
+                        <a href="https://applistatareavuejs3.netlify.app/index.html" target="_blank" class="btn btn-primary" >Ir a ejemplo</a>
+                        <a href="https://github.com/gonchidiaz125/AppTareasVueJs3" target="_blank" class="btn btn-primary">
+                            Código
+                            <i class="fab fa-github"></i>
+                          </a>
                     </div>
                 </div>
                 <div class="proyecto">
-                    <img src="img/p5.jpg" alt="">
+                    <img src="img/visual-basico.png" alt="">
                     <div class="overlay">
-                        <h3>Diseño Creativo</h3>
-                        <p>Fotografía</p>
-                    </div>
-                </div>
-                <div class="proyecto">
-                    <img src="img/p6.jpg" alt="">
-                    <div class="overlay">
-                        <h3>Diseño Creativo</h3>
-                        <p>Fotografía</p>
+                        <h3>Validación de Password</h3>
+                        <p>Backend NodeJS</p>
+                        <a href="https://github.com/gonchidiaz125/ValidadorDePasswordNodeJs" target="_blank" class="btn btn-primary">
+                            Código
+                            <i class="fab fa-github"></i>
+                          </a>
                     </div>
                 </div>
             </div>
@@ -359,15 +348,14 @@
             <div class="fila">
                 <!-- Formulario -->
                 <div class="col">
-                    <input type="text" placeholder="Tú Nombre">
-                    <input type="text" placeholder="Número telefónico">
-                    <input type="text" placeholder="Dirección de correo">
-                    <input type="text" placeholder="Tema">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
-                    <button>
-                        Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
-                        <span class="overlay"></span>
-                    </button>
+                    <form id="contactForm">
+                        <input type="text" id="name" placeholder="Tu Nombre" required>
+                        <input type="text" id="phone" placeholder="Número telefónico" required>
+                        <input type="email" id="email" placeholder="Dirección de correo" required>
+                        <input type="text" id="subject" placeholder="Tema" required>
+                        <textarea id="message" cols="30" rows="10" placeholder="Mensaje" required></textarea>
+                        <button type="submit">Enviar Mensaje <i class="fa-solid fa-paper-plane"></i><span class="overlay"></span></button>
+                    </form>
                 </div>
                 <!-- Mapa -->
                 <div class="col">
@@ -376,15 +364,15 @@
                         <ul>
                             <li>
                                 <i class="fa-solid fa-location-dot"></i>
-                                Nicaragua 159, San Rafael Mza
+                                Córdoba, Capital, Arg.
                             </li>
                             <li>
                                 <i class="fa-solid fa-mobile-screen"></i>
-                                Llamanos: 2384 - 4343443 
+                                03525-15537377 
                             </li>
                             <li>
                                 <i class="fa-solid fa-envelope"></i>
-                                Email: cw@example.com
+                                gonchi.diaz125@gmail.com
                             </li>
                         </ul>
                     </div>
@@ -399,14 +387,10 @@
             <i class="fa-solid fa-angles-up"></i>
         </a>
         <div class="redes">
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-skype"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#"><i class="fa-solid fa-rss"></i></a>
+            <a href="https://github.com/gonchidiaz125" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/gonzalo-andres-diaz/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
