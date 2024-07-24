@@ -337,14 +337,14 @@ html{
 }
 @keyframes trabajo {
     0%{width: 0%;}
-    100%{width: 70%;}
+    100%{width: 80%;}
 }
 
-.skills .skill .creatividad{
+.skills .skill .Proactividad{
     width: 0%;
-    animation: 2s creatividad forwards;
+    animation: 2s Proactividad forwards;
 }
-@keyframes creatividad {
+@keyframes Proactividad {
     0%{width: 0%;}
     100%{width: 99%;}
 }
@@ -355,7 +355,7 @@ html{
 }
 @keyframes dedicacion {
     0%{width: 0%;}
-    100%{width: 65%;}
+    100%{width: 80%;}
 }
 /* SECCION CURRICULUM */
 .curriculum{

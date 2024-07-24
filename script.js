@@ -30,7 +30,7 @@ function efectoHabilidades() {
         habilidades[5].classList.add("git");
         habilidades[6].classList.add("comunicacion");
         habilidades[7].classList.add("trabajo");
-        habilidades[8].classList.add("creatividad");
+        habilidades[8].classList.add("Proactividad");
         habilidades[9].classList.add("dedicacion");
     }
 }
