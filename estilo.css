@@ -207,7 +207,20 @@ html{
 }
 .sobremi a:hover .overlay{
     width: 100%;
+    border-radius: 9px;
 }
+.download-button {
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* Mantiene el color del texto actual */
+    border-radius: 10px;
+}
+
+.download-button:hover {
+    text-decoration: none; /* Asegura que el subrayado también se elimine en el hover */
+    
+}
+
+
 /* SECCION S K I L L S */
 .skills{
     background-color: #252A2E;
@@ -495,6 +508,7 @@ html{
 .proyectos .galeria .proyecto img{
     width: 100%;
     display: block;
+    border-radius: 9px;
 }
 .proyectos .galeria .proyecto .overlay{
     position: absolute;
@@ -510,6 +524,31 @@ html{
     font-size: 18px;
     letter-spacing: 3px;
     opacity: 0;
+    border-radius: 9px;
+}
+.custom-btn {
+    background-color: #252A2E;
+    border: none;
+    color: white;
+    padding: 5px 17px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12px;
+}
+.custom-btn:hover {
+    background-color: white;
+    color: #252A2E;
+    border: 2px solid #252A2E;
+    text-decoration: none;
+}
+
+.custom-icon {
+    margin-left: 5px;
 }
 .proyectos .galeria .proyecto .overlay h3{
     margin-bottom: 20px;
@@ -568,6 +607,7 @@ html{
     color: #fff;
     position: relative;
     z-index: 10;
+    border-radius: 10px;
 }
 .contacto button .overlay{
     position: absolute;
@@ -578,6 +618,7 @@ html{
     background-color: #1CB698;
     z-index: -1;
     transition: 1s;
+    border-radius: 9px;
 }
 .contacto button:hover .overlay{
     width: 100%;
